@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7330070137715151266
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 499466, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499466, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499466, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499466, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499466, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499466, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499466, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 499466, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422518, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: SteeringPerceiver
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437962, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: Flee.OuterRadius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437962, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: Flee.VectorProjection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437962, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: Flee.SensitivityOffset
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437962, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: innerCircleGizmo.Color.r
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437962, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: innerCircleGizmo.Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437962, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: innerCircleGizmo.Color.b
+      value: 0.5686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437962, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: outerCircleGizmo.Color.r
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437962, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: outerCircleGizmo.Color.g
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437962, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: outerCircleGizmo.Color.b
+      value: 0.8392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438526, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: Seek.VectorProjection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438526, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: innerCircleGizmo.Color.r
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438526, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: innerCircleGizmo.Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438526, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: innerCircleGizmo.Color.b
+      value: 0.5686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438526, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: outerCircleGizmo.Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438526, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: outerCircleGizmo.Color.g
+      value: 0.23529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438526, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: outerCircleGizmo.Color.b
+      value: 0.23529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456178, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: GameObjects.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456178, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: GameObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456178, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: Wander.VectorProjection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484076, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: Seek.SensitivityOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484076, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: Seek.VectorProjection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484076, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: innerCircleGizmo.Color.r
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484076, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: innerCircleGizmo.Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484076, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: innerCircleGizmo.Color.b
+      value: 0.5686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 11485278, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: Sensor
+      value: 
+      objectReference: {fileID: 11400000, guid: 656fdb59b687a9b43b3c59436f4eaef3,
+        type: 2}
+    - target: {fileID: 11485278, guid: 9d45335f43ae38144832d495b3289365, type: 3}
+      propertyPath: indicatorGizmo.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9d45335f43ae38144832d495b3289365, type: 3}
