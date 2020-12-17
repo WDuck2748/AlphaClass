@@ -105,6 +105,7 @@ namespace Invector.vCharacterController
 
         #endregion
 
+
         public void Init()
         {
             animator = GetComponent<Animator>();

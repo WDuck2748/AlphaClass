@@ -1,4 +1,7 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using VIDE_Data;
 
 namespace Invector.vCharacterController
 {
@@ -23,10 +26,21 @@ namespace Invector.vCharacterController
 
         #endregion
 
+        void OnTriggerEnter(Collider other)
+        {
+        }
+
+        void OnTriggerExit()
+        {
+        }
+
         protected virtual void Start()
         {
             InitilizeController();
             InitializeTpCamera();
+
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         protected virtual void FixedUpdate()
