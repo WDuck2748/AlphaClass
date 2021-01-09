@@ -26,6 +26,8 @@ public class DialogueManager : MonoBehaviour
     public Image dialoguePortrait;
     public float delay = 0.001f;
 
+    public bool outOfRange = true; 
+
     public Queue<DialogueBase.Info> dialogueInfo; //FIFO Collection
 
     private void Start()
@@ -81,5 +83,21 @@ public class DialogueManager : MonoBehaviour
     public void EndOfDialogue()
     {
         dialogueBox.SetActive(false);
+    }
+
+    public void EnterRangeOfNPC()
+    {
+        outOfRange = false;
+        //dialogueGUI.SetActive(true);
+        //if (dialogueActive == true)
+        //{
+        //    dialogueGUI.SetActive(false);
+        //}
+    }
+
+    public void OutOfRange()
+    {
+        outOfRange = true;
+        EndOfDialogue();
     }
 }

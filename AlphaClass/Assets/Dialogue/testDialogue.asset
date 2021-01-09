@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: testDialogue
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - myName: Hi
+  - myName: Name
     portrait: {fileID: 0}
     myText: Hello
-  - myName: My
+  - myName: Name
     portrait: {fileID: 0}
-    myText: This
+    myText: This is
   - myName: Name
     portrait: {fileID: 0}
     myText: My Name

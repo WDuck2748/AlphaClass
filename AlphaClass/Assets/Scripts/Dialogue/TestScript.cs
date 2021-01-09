@@ -6,6 +6,9 @@ public class TestScript : MonoBehaviour
 {
 
     public DialogueBase dialogue;
+    public bool outOfRange = true;
+    public KeyCode DialogueInput = KeyCode.F;
+
     //  public bool active = false;
 
     public void TriggerDialogue()
@@ -21,9 +24,11 @@ public class TestScript : MonoBehaviour
         //    active = false;
         // }
     }
+    /*
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && DialogueManager.instance.dialogueBox.activeSelf == true)
+        FindObjectOfType<DialogueManager>().EnterRangeOfNPC();
+        if (Input.GetKeyDown(DialogueInput) && DialogueManager.instance.dialogueBox.activeSelf == true)
         {
             GetNextLine();
             if (DialogueManager.instance.dialogueBox.activeSelf == false)
@@ -32,11 +37,40 @@ public class TestScript : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.F) && DialogueManager.instance.dialogueBox.activeSelf == false)
+        if (Input.GetKeyDown(DialogueInput) && DialogueManager.instance.dialogueBox.activeSelf == false)
         {
             //    active = true;
             TriggerDialogue();
         }
 
     }
+    */
+    
+    public void OnTriggerStay(Collider other)
+    {
+        this.gameObject.GetComponent<TestScript>().enabled = true;
+        FindObjectOfType<DialogueManager>().EnterRangeOfNPC();
+
+        if ((other.gameObject.tag == "Player") && Input.GetKeyDown(DialogueInput) && DialogueManager.instance.dialogueBox.activeSelf == true)
+        {
+            GetNextLine();
+            if (DialogueManager.instance.dialogueBox.activeSelf == false)
+            {
+                return;
+            }
+        }
+
+        if ((other.gameObject.tag == "Player") && Input.GetKeyDown(DialogueInput) && DialogueManager.instance.dialogueBox.activeSelf == false)
+        {
+            //    active = true;
+            TriggerDialogue();
+        }
+    }
+
+    public void OnTriggerExit()
+    {
+        FindObjectOfType<DialogueManager>().OutOfRange();
+        this.gameObject.GetComponent<TestScript>().enabled = false;
+    }
+    
 }
