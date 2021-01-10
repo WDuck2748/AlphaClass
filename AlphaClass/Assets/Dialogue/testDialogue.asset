@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911402b49312a9c449f48937836e07c0, type: 3}
   m_Name: testDialogue
   m_EditorClassIdentifier: 
-  dialogueInfo:
-  - myName: Name
+  dialogueInit:
+    myName: 
     portrait: {fileID: 0}
-    myText: Hello
-  - myName: Name
-    portrait: {fileID: 0}
-    myText: This is
-  - myName: Name
-    portrait: {fileID: 0}
-    myText: My Name
+    myText: "If not, I'll get you guys some daction before tomorrow's tournament!
+      XD\r\nDefinitely considering playing Illyaboard :(\r \nyup\r\nRice is cool
+      too\r\nRice is cool too\r\nMango\r\nMango\r\nYeah this is just what I thought\r\nRice
+      is cool stick to wood!\r\nok so you guys are gonna be playing that tree?\r\nYup\r\nok
+      so you guys are gonna be playing that"
+    textFile: {fileID: 4900000, guid: a7d54d7e41b32b64ea122e2149b01b9d, type: 3}
+  DialogueCount: 12

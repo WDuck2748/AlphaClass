@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-
+    //public TextAsset textFile;     // drop your file here in inspector
     public static DialogueManager instance;
     private void Awake()
     {
@@ -33,12 +33,22 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         dialogueInfo = new Queue<DialogueBase.Info>();
+      //  string text = textFile.text;  //this is the content as string
+      //  byte[] byteText = textFile.bytes;  //this is the content as byte array
+    }
+
+    private void textGen()
+    {
+        // TextFile Generation
     }
 
     public void EnqueueDialogue(DialogueBase db)
     {
+        // Start TextFile Generation
+
         dialogueBox.SetActive(true);
         dialogueInfo.Clear();
+        db.Init();
 
         foreach(DialogueBase.Info info in db.dialogueInfo)
         {
@@ -46,7 +56,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         DequeueDialogue();
-
     }
    
     public void DequeueDialogue()
@@ -71,7 +80,7 @@ public class DialogueManager : MonoBehaviour
     
     IEnumerator TypeText(DialogueBase.Info info)
     {
-        dialogueText.text = "";
+        dialogueText.text = info.myText;
         foreach(char c in info.myText.ToCharArray())
         {
             yield return new WaitForSeconds(delay);
