@@ -21,4 +21,42 @@ MonoBehaviour:
       is cool stick to wood!\r\nok so you guys are gonna be playing that tree?\r\nYup\r\nok
       so you guys are gonna be playing that"
     textFile: {fileID: 4900000, guid: a7d54d7e41b32b64ea122e2149b01b9d, type: 3}
+  dialogueInfo:
+  - myName: 
+    portrait: {fileID: 0}
+    myText: "If not, I'll get you guys some daction before tomorrow's tournament!
+      XD\r"
+  - myName: 
+    portrait: {fileID: 0}
+    myText: "Definitely considering playing Illyaboard :(\r "
+  - myName: 
+    portrait: {fileID: 0}
+    myText: "yup\r"
+  - myName: 
+    portrait: {fileID: 0}
+    myText: "Rice is cool too\r"
+  - myName: 
+    portrait: {fileID: 0}
+    myText: "Rice is cool too\r"
+  - myName: 
+    portrait: {fileID: 0}
+    myText: "Mango\r"
+  - myName: 
+    portrait: {fileID: 0}
+    myText: "Mango\r"
+  - myName: 
+    portrait: {fileID: 0}
+    myText: "Yeah this is just what I thought\r"
+  - myName: 
+    portrait: {fileID: 0}
+    myText: "Rice is cool stick to wood!\r"
+  - myName: 
+    portrait: {fileID: 0}
+    myText: "ok so you guys are gonna be playing that tree?\r"
+  - myName: 
+    portrait: {fileID: 0}
+    myText: "Yup\r"
+  - myName: 
+    portrait: {fileID: 0}
+    myText: ok so you guys are gonna be playing that
   DialogueCount: 12
