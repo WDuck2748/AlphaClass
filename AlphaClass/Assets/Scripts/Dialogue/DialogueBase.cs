@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogues")]
-public class DialogueBase: ScriptableObject
+public class DialogueBase : ScriptableObject
 {
     [System.Serializable]
     public class InfoInit
@@ -26,7 +26,7 @@ public class DialogueBase: ScriptableObject
     [Header("Insert Dialogue Information Below")]
     //public TextAsset textFile;     // drop your file here in inspector
     public InfoInit dialogueInit;
-   // public Info[] dialogueInfo;
+    // public Info[] dialogueInfo;
     public List<Info> dialogueInfo;
     public int DialogueCount;
     //  public Info[] dialogueInfo;
@@ -38,16 +38,21 @@ public class DialogueBase: ScriptableObject
         //  dialogueInit.myText = dialogueInit.textFile.text;
         string[] seperatingString = { "\n" };
         string[] lines = dialogueInit.myText.Split(seperatingString, System.StringSplitOptions.RemoveEmptyEntries);
-       // Info tempDialogue ;
+        // Info tempDialogue ;
         //Debug.Log("Line 1 : " + lines[1]);
         int i = 0;
-       foreach (string dialogueLines in lines)
+        foreach (string dialogueLines in lines)
         {
-           // Debug.Log("Line : " + dialogueLines);
-            dialogueInfo.Add(new Info { myName = dialogueInit.myName, portrait = dialogueInit.portrait, myText = dialogueLines});
+            // Debug.Log("Line : " + dialogueLines);
+            dialogueInfo.Add(new Info { myName = dialogueInit.myName, portrait = dialogueInit.portrait, myText = dialogueLines });
             Debug.Log("Line : " + dialogueInfo[i].myText);
             i++;
         }
         DialogueCount = i;
+    }
+
+    public void Clean()
+    {
+        dialogueInfo.Clear();
     }
 }

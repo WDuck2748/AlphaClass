@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueName;
     public Text dialogueText;
     public Image dialoguePortrait;
-    public float delay = 0.001f;
+    public float delay = 0.1f;
 
     public bool outOfRange = true; 
 
@@ -48,6 +48,7 @@ public class DialogueManager : MonoBehaviour
 
         dialogueBox.SetActive(true);
         dialogueInfo.Clear();
+        db.Clean();
         db.Init();
 
         foreach(DialogueBase.Info info in db.dialogueInfo)
@@ -71,17 +72,18 @@ public class DialogueManager : MonoBehaviour
         DialogueBase.Info info = dialogueInfo.Dequeue();
 
         dialogueName.text = info.myName;
-        dialogueText.text = info.myText;
+        //dialogueText.text = info.myText;
         dialoguePortrait.sprite = info.portrait;
 
         StartCoroutine(TypeText(info));
-
     }
     
     IEnumerator TypeText(DialogueBase.Info info)
     {
-        dialogueText.text = info.myText;
-        foreach(char c in info.myText.ToCharArray())
+        dialogueText.text = "";
+
+        //Debug.Log("Line : " + dialogueInfo[i].myText);
+        foreach (char c in info.myText.ToCharArray())
         {
             yield return new WaitForSeconds(delay);
             dialogueText.text += c;
