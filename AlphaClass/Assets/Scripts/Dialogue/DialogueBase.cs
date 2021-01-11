@@ -35,8 +35,8 @@ public class DialogueBase : ScriptableObject
 
     public void Init()
     {
-        //  dialogueInit.myText = dialogueInit.textFile.text;
-        string[] seperatingString = { "\n" };
+        dialogueInit.myText = dialogueInit.textFile.text;
+        string[] seperatingString = { "\r\n\r\n" };
         string[] lines = dialogueInit.myText.Split(seperatingString, System.StringSplitOptions.RemoveEmptyEntries);
         // Info tempDialogue ;
         //Debug.Log("Line 1 : " + lines[1]);
@@ -45,7 +45,7 @@ public class DialogueBase : ScriptableObject
         {
             // Debug.Log("Line : " + dialogueLines);
             dialogueInfo.Add(new Info { myName = dialogueInit.myName, portrait = dialogueInit.portrait, myText = dialogueLines });
-            Debug.Log("Line : " + dialogueInfo[i].myText);
+           // Debug.Log("Line : " + dialogueInfo[i].myText);
             i++;
         }
         DialogueCount = i;
