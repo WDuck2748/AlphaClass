@@ -54,8 +54,8 @@ public class DialogueManager : MonoBehaviour
         string cPath = System.IO.Directory.GetCurrentDirectory();
         UnityEngine.Debug.Log(cPath);
 
-        cmd.StandardInput.WriteLine("d:");
-        cmd.StandardInput.WriteLine("cd " + cPath);
+        //cmd.StandardInput.WriteLine("d:");
+        cmd.StandardInput.WriteLine("cd /D " + cPath);
         cmd.StandardInput.WriteLine("cd textgen");
         cmd.StandardInput.WriteLine("python generator.py");
         //cmd.StandardInput.WriteLine("PAUSE");
