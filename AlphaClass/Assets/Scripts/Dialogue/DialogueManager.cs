@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("fix this" + gameObject.name );
+            UnityEngine.Debug.LogWarning("fix this" + gameObject.name );
         }
         else
         {
@@ -39,12 +40,44 @@ public class DialogueManager : MonoBehaviour
 
     private void textGen()
     {
+        
         // TextFile Generation
+        Process cmd = new Process();
+        cmd.StartInfo.FileName = "cmd.exe";
+        cmd.StartInfo.RedirectStandardInput = true;
+        cmd.StartInfo.RedirectStandardOutput = true;
+        cmd.StartInfo.CreateNoWindow = false;
+        cmd.StartInfo.UseShellExecute = false;
+        //cmd.StartInfo.Arguments = "ECHO Hello World";
+        cmd.Start();
+
+        string cPath = System.IO.Directory.GetCurrentDirectory();
+        UnityEngine.Debug.Log(cPath);
+
+        cmd.StandardInput.WriteLine("d:");
+        cmd.StandardInput.WriteLine("cd " + cPath);
+        cmd.StandardInput.WriteLine("cd textgen");
+        cmd.StandardInput.WriteLine("python generator.py");
+        //cmd.StandardInput.WriteLine("PAUSE");
+        cmd.StandardInput.Flush();
+        cmd.StandardInput.Close();
+        cmd.WaitForExit();
+        UnityEngine.Debug.Log(cmd.StandardOutput.ReadToEnd());
+        // UnityEngine.Debug.Log("Heeyyyyyyy TEXTGENNNN");
+        
+
+        /*
+        string strCmdText;
+        strCmdText = "/C pause";
+        System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+        */
+
     }
 
     public void EnqueueDialogue(DialogueBase db)
     {
         // Start TextFile Generation
+        textGen();
 
         dialogueBox.SetActive(true);
         dialogueInfo.Clear();
