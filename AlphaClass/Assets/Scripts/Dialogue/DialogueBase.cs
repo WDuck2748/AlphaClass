@@ -14,7 +14,7 @@ public class DialogueBase: ScriptableObject
         public string myText;
         public TextAsset textFile;     // drop your file here in inspector
     }
-
+    [System.Serializable]
     public class Info
     {
         public string myName;
@@ -35,16 +35,17 @@ public class DialogueBase: ScriptableObject
 
     public void Init()
     {
-      //  dialogueInit.myText = dialogueInit.textFile.text;
-
-        string[] lines = dialogueInit.myText.Split('\r');
+        //  dialogueInit.myText = dialogueInit.textFile.text;
+        string[] seperatingString = { "\n" };
+        string[] lines = dialogueInit.myText.Split(seperatingString, System.StringSplitOptions.RemoveEmptyEntries);
        // Info tempDialogue ;
         //Debug.Log("Line 1 : " + lines[1]);
         int i = 0;
        foreach (string dialogueLines in lines)
         {
-            Debug.Log("Line 0 : " + dialogueLines);
+           // Debug.Log("Line : " + dialogueLines);
             dialogueInfo.Add(new Info { myName = dialogueInit.myName, portrait = dialogueInit.portrait, myText = dialogueLines});
+            Debug.Log("Line : " + dialogueInfo[i].myText);
             i++;
         }
         DialogueCount = i;
